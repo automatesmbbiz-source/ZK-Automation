@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Services — AutomateSMB</title>
+<meta name="description" content="Real pricing for every AutomateSMB service — online booking, reminders, reviews, missed-call text-back, an FAQ chatbot, Google Business Profile setup and website design — with three tiers each.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0e10'/%3E%3Ctext x='32' y='35' text-anchor='middle' dominant-baseline='central' font-family='Arial, sans-serif' font-weight='800' font-size='34' fill='%236FE8FF'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page" id="page">
+
+  <!-- fine hologram scanlines -->
+  <div style="position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);"></div>
+
+  <!-- circuit grid backdrop -->
+  <div style="position:absolute;inset:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,59,78,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,59,78,0.05) 1px, transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(ellipse 1300px 850px at 50% 20%, black 0%, transparent 85%);
+    mask-image:radial-gradient(ellipse 1300px 850px at 50% 20%, black 0%, transparent 85%);
+  "></div>
+
+  <!-- ambient glows -->
+  <div class="parallax-slow" style="position:absolute;top:-160px;right:-140px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle, #FF3B4E33 0%, transparent 70%);filter:blur(10px);pointer-events:none;"></div>
+  <div class="parallax-slow" style="position:absolute;bottom:-220px;left:-160px;width:560px;height:560px;border-radius:999px;background:radial-gradient(circle, #3D8BFF26 0%, transparent 70%);filter:blur(10px);pointer-events:none;"></div>
+
+  <!-- soft light sheen that follows the cursor -->
+  <div class="cursor-sheen" style="position:absolute;inset:0;pointer-events:none;"></div>
+
+  <div class="shell">
+
+    <!-- nav -->
+    <div class="nav">
+      <a href="index.html" style="display:flex;align-items:center;gap:16px;text-decoration:none;">
+        <svg id="brand-mark-svg" width="56" height="56" viewBox="105 25 410 410" role="img" aria-label="AutomateSMB logo">
+          <defs>
+            <filter id="bladeShadow" x="-80%" y="-80%" width="260%" height="260%">
+              <feDropShadow dx="3" dy="4" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.8"/>
+            </filter>
+            <pattern id="brushed" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(-55)">
+              <rect width="4" height="4" fill="none"/>
+              <line x1="0.5" y1="0" x2="0.5" y2="4" stroke="#ffffff" stroke-opacity="0.16" stroke-width="0.5"/>
+              <line x1="1.8" y1="0" x2="1.8" y2="4" stroke="#000000" stroke-opacity="0.16" stroke-width="0.5"/>
+              <line x1="3" y1="0" x2="3" y2="4" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.4"/>
+            </pattern>
+            <polygon id="bladeShape" points="24,-20 55,-50 50,-66 82,-98 66,-91 127,-87 169,-31 158,-86 99,-124 84,-113 38,-135 29,-90 -24,-20"/>
+          </defs>
+          <g id="logo-spin-g">
+          <g transform="translate(310,230) rotate(0)">
+            <g filter="url(#bladeShadow)">
+              <use href="#bladeShape" fill="#2a2c2f"/>
+              <use href="#bladeShape" fill="url(#brushed)"/>
+              <use href="#bladeShape" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="miter"/>
+            </g>
+          </g>
+          <g transform="translate(310,230) rotate(120)">
+            <g filter="url(#bladeShadow)">
+              <use href="#bladeShape" fill="#8f1a26"/>
+              <use href="#bladeShape" fill="url(#brushed)"/>
+              <use href="#bladeShape" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="miter"/>
+            </g>
+          </g>
+          <g transform="translate(310,230) rotate(240)">
+            <g filter="url(#bladeShadow)">
+              <use href="#bladeShape" fill="#8a6a1e"/>
+              <use href="#bladeShape" fill="url(#brushed)"/>
+              <use href="#bladeShape" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="miter"/>
+            </g>
+          </g>
+          <circle cx="310" cy="230" r="18" fill="#0d0e10" stroke="#1c1f22" stroke-width="1.5" filter="url(#bladeShadow)"/>
+          <text x="310" y="231" text-anchor="middle" dominant-baseline="central" font-family="'Unbounded',sans-serif" font-weight="800" font-size="21" fill="#6FE8FF">A</text>
+          <polygon points="310,225 305,232 315,232" fill="#0d0e10"/>
+          </g>
+        </svg>
+        <span style="font-family:'Unbounded',sans-serif;font-weight:700;font-size:22px;color:#fff;letter-spacing:-0.01em;">AutomateSMB</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink active" href="services.html">Services</a>
+        <a class="navlink" href="about.html">About</a>
+        <a href="contact.html" class="btn-ghost" style="border:1px solid rgba(255,255,255,0.16);border-radius:8px;padding:9px 18px;font-size:14px;font-weight:500;color:#fff;">Contact</a>
+      </div>
+    </div>
+
+    <!-- page header -->
+    <div class="page-header">
+      <div class="page-kicker" style="border:1px solid rgba(111,232,255,0.35);background:rgba(111,232,255,0.08);color:#6FE8FF;">SERVICES</div>
+      <h1 style="margin:0 0 14px 0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(28px,4vw,42px);line-height:1.12;color:#f5f5f7;text-wrap:balance;">Everything we build, with real pricing</h1>
+      <p style="margin:0;font-size:16px;line-height:1.65;color:#a3a3ad;">Seven automations, each with three ways to set it up — from a fast, simple version to a fully custom build. Every tier below is a one-time setup price; where a tool has its own ongoing fee, that's noted separately and paid directly to the provider, never to us. Tap a service to open it up.</p>
+    </div>
+
+    <div id="services-list"></div>
+
+    <div class="site-footer">© 2026 AutomateSMB. All rights reserved.</div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var page = document.getElementById('page');
+
+  /* ---- nav logo spin + cursor sheen (same behavior as the home page) ---- */
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var logoSpinEl = document.getElementById('logo-spin-g');
+  var logoAngle = 0, logoVel = 0, lastCursorX = null;
+  function tickLogo() {
+    if (!reducedMotion && logoSpinEl) {
+      logoVel *= 0.94;
+      logoAngle += logoVel;
+      logoSpinEl.setAttribute('transform', 'rotate(' + logoAngle.toFixed(2) + ' 310 230)');
+    }
+    requestAnimationFrame(tickLogo);
+  }
+  requestAnimationFrame(tickLogo);
+  function onPageMove(e) {
+    var r = page.getBoundingClientRect();
+    page.style.setProperty('--mx', Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)));
+    page.style.setProperty('--my', Math.min(1, Math.max(0, (e.clientY - r.top) / r.height)));
+    if (lastCursorX !== null) {
+      logoVel = Math.max(-45, Math.min(45, logoVel + (e.clientX - lastCursorX) * 0.7));
+    }
+    lastCursorX = e.clientX;
+  }
+  function onPageLeave() { page.style.setProperty('--mx', 0.5); page.style.setProperty('--my', 0.5); lastCursorX = null; }
+  page.addEventListener('mousemove', onPageMove);
+  page.addEventListener('mouseleave', onPageLeave);
+
+  /* ---- mobile nav: hamburger toggle for the phone-width dropdown ---- */
+  (function () {
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks = document.getElementById('nav-links');
+    if (!navToggle || !navLinks) return;
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+    navToggle.addEventListener('click', function () {
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    Array.prototype.forEach.call(navLinks.querySelectorAll('a'), function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+  })();
+
+  /* ---- full service data, straight from the pricing docs — every tier's
+     full bullet list, setup time, monthly fee and "best for", not condensed. ---- */
+  var SERVICES_FULL = [
+    {
+      title: 'Online Booking', priceRange: '$250.99 – $3,500.99+',
+      intro: "Online booking lets a customer book an appointment at 10 p.m., or while you're with another customer, instead of waiting for you to pick up the phone. Right now every booking starts with a call, a message or a visit that you have to catch — booking adds another way in: the customer picks a service and a time, and the request reaches you automatically.",
+      tiers: [
+        { name: 'Booking Request Form', price: '$250.99, one time', desc: "The customer fills out a short form and you contact them to confirm the time. It's the fastest way to add booking to your website, and there's no monthly fee at normal volume.", bullets: ['Customer picks the service they want', 'Customer picks a preferred day and a time window, such as morning or afternoon', 'Customer adds their name, phone number, email and a short note about what they need', 'Every request comes to your email, and you confirm by phone, text or email'], setup: 'Setup: 1–2 days', monthly: 'Monthly fee: none', bestFor: 'Best for: a one-person or small business that likes to talk to the customer before confirming' },
+        { name: 'Online Scheduler', price: '$600.99 setup + provider fee', desc: 'A live booking calendar on your website. Customers see the times you have open and book themselves, with no back-and-forth. We connect an established scheduling service (Calendly, Cal.com or Square Appointments, for example) to your website and your own calendar.', bullets: ['Customers only see the times you leave open', 'Bookings drop straight into your calendar', 'Customers get an automatic confirmation and a reminder, so fewer no-shows', 'You set your hours, your time windows and how far ahead people can book'], setup: 'Setup: 3–5 days', monthly: "Provider's fee: ~$0–50/mo (paid directly to the scheduling service, confirmed before signup)", bestFor: 'Best for: most small businesses that want routine appointments booked without a phone call' },
+        { name: 'Custom Booking System', price: 'From $3,500.99, one time', desc: 'A booking system built around how your business actually works, instead of bending your business to fit a ready-made tool. The final price depends on what you need in it.', bullets: ['Different appointment types with different lengths and prices', 'Rules for locations or service areas, so customers are told up front what you cover', 'Text-message confirmations and reminders', 'A customer list with booking history, so repeat customers are one tap away', "A simple screen where you or your staff see and move the day's appointments"], setup: 'Setup: 3–6 weeks', monthly: 'Optional ongoing support: $150.99/mo. Texting/hosting fees billed by usage, confirmed during planning', bestFor: 'Best for: a growing business with several staff or an office manager, where booking is a core part of the business' }
+      ],
+      notes: ["Urgent requests stay on the phone — anything that can't wait for a calendar slot goes straight to a call, so your phone number stays at the top of every page.", "Time windows work for jobs that vary in length — customers can book a window like \"9 to 12\" instead of an exact time.", 'Bigger or custom work can start with a conversation — the customer requests a callback or consultation instead of booking the whole job outright.', 'You stay in control — you choose which days and hours are open, and can block off time whenever you need it.']
+    },
+    {
+      title: 'Reminders & Cancellations', priceRange: '$150.99 – $1,800.99',
+      intro: "An empty slot costs you money, especially when it's a last-minute no-show. Reminders help customers turn up, and an easy way to cancel or reschedule means you find out early enough to fill the slot.",
+      tiers: [
+        { name: 'Templates & Policy', price: '$150.99', desc: "You send the reminders by hand, but from ready-made messages, and customers know exactly what your cancellation rules are.", bullets: ['Reminder messages for text and email, ready to copy and paste', 'A short, fair cancellation policy written for your business', 'The policy shown on your website and in booking confirmations'], setup: 'Setup: 1–2 days', monthly: 'Monthly fee: none', bestFor: 'Best for: a business with only a few appointments a week' },
+        { name: 'Automatic Reminders', price: '$300.99', desc: 'Works alongside an online scheduler. Customers get a reminder automatically, and can cancel or reschedule themselves with one click, with no phone tag.', bullets: ['Automatic confirmation and reminder before each appointment', 'A cancel or reschedule link in every message', 'Your cancellation policy included in the confirmation', 'Cancelled times open up again for other customers to book'], setup: 'Setup: 2–4 days if you already have online booking', monthly: 'Provider fee: ~$0–50/mo, often the same tool that handles your bookings', bestFor: 'Best for: most small businesses, especially ones that take online bookings' },
+        { name: 'Custom + No-Show Protection', price: '$1,800.99', desc: 'A system built around your rules, for a business where a missed appointment really hurts.', bullets: ['Everything in Automatic Reminders', 'Text-message reminders at the times you choose, such as two days before and two hours before', 'Optional deposits or a cancellation fee for late cancellations or no-shows', 'A waitlist that offers a cancelled slot to the next customer', 'A simple report of cancellations and no-shows'], setup: 'Setup: 3–6 weeks', monthly: 'Texting and payment-tool fees billed by usage, confirmed during planning', bestFor: 'Best for: a busy business with staff, or one that loses real money on no-shows' }
+      ],
+      notes: ["Works best with online booking — the automatic tiers are add-ons to a scheduler, most useful alongside one.", 'A fair policy is part of the setup — clear, reasonable rules (like 24 hours notice) get better results than strict ones.', "Reminders reduce no-shows, they don't remove them — we can't promise a specific drop, but they're one of the simplest ways to protect your schedule.", 'Messages follow the rules — each text names your business and lets the customer opt out by replying STOP.']
+    },
+    {
+      title: 'Review Requests', priceRange: '$150.99 – $1,200.99',
+      intro: "Most customers check Google reviews before they call, and businesses with more recent reviews tend to stand out. The problem is that happy customers rarely leave one unless someone asks.",
+      tiers: [
+        { name: 'Review Link & QR Card', price: '$150.99', desc: "We set up your direct Google review link and give you simple ways to share it. There's no software to pay for.", bullets: ['Your Google review link, tested and ready', 'A printable QR code card or sticker that customers scan to leave a review', 'Ready-to-send text and email wording you can copy and paste', 'A short guide on when and how to ask'], setup: 'Setup: 1–2 days', monthly: 'Monthly fee: none', bestFor: 'Best for: a business with only a few jobs a week that is happy to send the request by hand' },
+        { name: 'Automatic Requests', price: '$350.99', desc: "A review tool sends a text or email to each customer after a job, and follows up once if they don't respond. You add the customer's details and the tool does the rest.", bullets: ['A review tool set up and connected to your Google profile', 'Automatic text or email request after each job', "A gentle follow-up for customers who don't respond", 'Your wording and branding on every message'], setup: 'Setup: 3–5 days', monthly: 'Provider fee: ~$10–60/mo, some with free plans', bestFor: 'Best for: most small businesses with steady work that want reviews without thinking about it' },
+        { name: 'Full Review System', price: '$1,200.99', desc: 'Review requests connected to how you already work, with monitoring and reply support so every review is seen and answered.', bullets: ['Everything in Automatic Requests', 'Requests triggered automatically from your booking or job list', 'Alerts when a new review comes in, and suggested replies you can approve', 'Your best reviews shown on your website', 'A simple monthly summary of how many requests went out and how many reviews came in'], setup: 'Setup: 1–3 weeks', monthly: 'Provider fee: ~$30–180/mo depending on volume', bestFor: 'Best for: a busier business with staff, or one that wants to build its reputation as a priority' }
+      ],
+      notes: ["We ask every customer, not just the happy ones — Google's rules discourage screening who gets asked, and a mix of honest reviews looks more trustworthy anyway.", "We can't promise a number of reviews — automation makes asking easy, but customers decide whether to respond.", 'Replying matters — a quick, polite reply to every review, including critical ones, shows customers you’re paying attention.', 'We never write or buy fake reviews — it breaks Google’s rules and can get your profile penalized.']
+    },
+    {
+      title: 'Missed-Call Text-Back', priceRange: '$150.99 – $1,000.99',
+      intro: "When you can't pick up, most callers don't leave a voicemail — they call the next business on the list. Missed-call text-back sends an automatic text within moments, so the customer knows you got their call and can reply or book right away.",
+      tiers: [
+        { name: 'Built-In Auto-Reply', price: '$150.99', desc: "Many business phone plans and apps already include an automatic reply for missed calls, but most owners never turn it on. We check what you already have and set it up properly.", bullets: ['Setup of the auto-reply feature on your existing phone or plan, if it has one', 'A clear message that names your business and says what to do next', 'A different message for after hours, where your plan allows it'], setup: 'Setup: 1 day', monthly: 'Monthly fee: none beyond your existing phone service', bestFor: 'Best for: a business whose phone plan already includes the feature and that doesn’t need anything fancy' },
+        { name: 'Dedicated Text-Back Tool', price: '$350.99', desc: 'A separate tool connected to your business number that texts every missed caller and sends the replies to your phone.', bullets: ['A text-back tool set up and connected to your business number', 'A friendly message with your business name and a link to your website or booking page', 'Customer replies land in one inbox on your phone', "Only one text per missed call, so callers aren't spammed"], setup: 'Setup: 2–4 days', monthly: 'Provider fee: ~$20–100/mo, plus a few cents per text on some plans', bestFor: 'Best for: most small businesses that miss calls while working and want every caller answered' },
+        { name: 'Smart Follow-Up', price: '$1,000.99', desc: 'A more complete setup that turns a missed call into a conversation, and passes the lead to you with the details.', bullets: ['Everything in Dedicated Text-Back Tool', 'Different messages for business hours, after hours and busy times', 'Questions that collect what the caller needs, so you can call back prepared', 'A link so callers can book themselves, when you have online booking', 'Alerts sent to you or your staff, and optional connection to your customer list'], setup: 'Setup: 1–3 weeks', monthly: 'Provider fee: ~$100–300/mo at this level', bestFor: 'Best for: a busy business with staff, or one that gets many calls outside working hours' }
+      ],
+      notes: ["It doesn't answer the call — text-back buys you time and keeps the caller from moving on, but can't answer questions or judge urgency.", 'Urgent needs still go to the phone — the message can tell callers how to reach you quickly if it can’t wait.', 'Messages follow the rules — each text names your business and lets the customer opt out by replying STOP.', 'Wording matters — a message that just says "leave a voicemail" defeats the purpose, so we write one that gives the caller a next step.']
+    },
+    {
+      title: 'FAQ Chatbot', priceRange: '$450.99 – $3,500.99',
+      intro: "A chatbot on your website answers the questions customers ask again and again, such as your hours, services, prices and area, at any time of day. It can also collect a customer's details when you're busy or closed, so you follow up with a real lead.",
+      tiers: [
+        { name: 'Simple FAQ Widget', price: '$450.99', desc: 'A chat window on your site that answers from a set of questions and answers we write with you, using a ready-made chatbot platform.', bullets: ['A chat widget set up on your website in your colours', 'Answers to your most common questions, from your own information', 'A clear "call us" or "leave your details" option when it can\'t help'], setup: 'Setup: 2–4 days', monthly: 'Platform fee: ~$10–100/mo, many with a free plan', bestFor: 'Best for: a business that gets the same handful of questions every day' },
+        { name: 'Trained Chatbot + Lead Capture', price: '$1,200.99', desc: 'A chatbot trained on your business, so it can hold a natural conversation and pass real leads to you.', bullets: ['Everything in Simple FAQ Widget', 'Trained on your services, service area, hours, price ranges and how you work', "Collects the customer's name, phone and what they need, and sends it to your email or phone", 'Sends customers to your booking page or phone number at the right moment', 'Testing on real questions before launch'], setup: 'Setup: 1–3 weeks', monthly: 'Platform + AI usage fee: ~$30–150/mo depending on volume', bestFor: 'Best for: most small businesses that want the chatbot to bring in leads after hours' },
+        { name: 'Custom Chatbot', price: '$3,500.99', desc: 'A chatbot built around your business and connected to the tools you already use.', bullets: ['Everything in Trained Chatbot + Lead Capture', 'Connected to your booking system or customer list', 'Hands the conversation to you with the full history when a question is too complex', 'A review of how customer information is collected and stored, in line with Canadian privacy rules', 'Regular tuning as your services and prices change'], setup: 'Setup: 3–6 weeks', monthly: 'Optional ongoing support: $100.99/mo, plus usage fees billed by providers', bestFor: 'Best for: a growing business with many services, several staff or lots of website traffic' }
+      ],
+      notes: ['It only knows what we teach it — the chatbot answers from your information, so we keep answers short and accurate and update them when your prices or hours change.', "It can still get things wrong — that's why we test it on real questions first and set it to hand off to you when it isn't sure.", "It doesn't replace answering the phone — it handles routine questions, and urgent or complicated ones go to a person.", "Customer details are handled carefully — we tell customers when they're chatting with a bot, and only collect what you need to follow up."]
+    },
+    {
+      title: 'Google Business Profile Setup', priceRange: '$250.99 – $750.99',
+      intro: 'Your Google Business Profile is the free listing that appears in Google Maps and in the local results box when someone searches for a business like yours. For many local businesses it brings in more calls than the website does.',
+      tiers: [
+        { name: 'Basic', price: '$250.99', desc: 'We get your profile created or claimed, verified and showing the right information.', bullets: ["We check whether a listing already exists, so you don't end up with duplicates", 'Profile created or claimed, and ownership verified', 'Business name, phone, website, hours and categories filled in accurately', "Service area set up, if you work at customers' locations and don't want your address shown"], setup: "Setup: 1–2 days, plus Google's verification wait (can take several days)", monthly: 'Monthly fee: none', bestFor: 'Best for: a business that just needs to be listed correctly' },
+        { name: 'Standard', price: '$400.99', desc: 'A fuller profile that gives customers a reason to choose you.', bullets: ['Everything in Basic', 'Each of your services listed, with a short plain description', 'A business description written in your own words', 'Your logo and up to ten photos uploaded', 'Website and booking buttons connected, and your review link ready to share'], setup: 'Setup: 3–5 days, plus the verification wait', monthly: 'Monthly fee: none', bestFor: 'Best for: most local businesses' },
+        { name: 'Complete', price: '$750.99', desc: 'A full setup, with a month of attention after launch so the profile gets off to a strong start.', bullets: ['Everything in Standard', "A larger set of photos, plus a plan for what to add over time", 'Answers to common customer questions set up on the profile', 'Four weekly updates during the first month, such as new photos or an offer', "A check after 30 days to fix anything Google flagged and adjust what isn't working"], setup: 'Setup: 1–2 weeks, plus the verification wait', monthly: 'Optional ongoing upkeep: $150.99/mo (photos, review replies, updates)', bestFor: 'Best for: a business in a competitive area that wants a strong start' }
+      ],
+      notes: ["You own your profile — you are the owner and we're added as a manager, so you keep control if we ever stop working together.", 'Verification takes time — Google decides how and when to verify, and the method varies by business.', 'We use your real business name — adding extra keywords breaks Google’s rules and can get a profile suspended.', "No promises on ranking — a complete profile improves your chances, but reviews and proximity to the customer matter a lot too.", "Google's rules change — we check the current requirements at the time of setup."]
+    },
+    {
+      title: 'Website', priceRange: '$499.99 – $2,500.99',
+      intro: "A website is usually the first place a customer checks before they call. It needs to load fast on a phone, show what you do, and make it obvious how to reach you. Booking is not included here — see Online Booking separately.",
+      tiers: [
+        { name: 'Starter (1 page)', price: '$499.99', desc: "Everything a customer needs on a single scrolling page. A good fit if you're just getting started or mainly need something to point people to.", bullets: ['Your business name, what you do and where you work', 'Your services in a short list', 'A tap-to-call phone button and a contact form that emails you', 'A short "about" section and your hours'], setup: 'Setup: 2–3 days once we have your details', monthly: "Domain: ~$15–30/yr, hosting free for most small sites", bestFor: "Best for: a new business or a simple service that doesn't need much explaining" },
+        { name: 'Standard (up to 5 pages)', price: '$1,200.99', desc: 'A proper small-business site with separate pages, so customers can find what they need quickly. This is the most common choice.', bullets: ['Home, Services, Gallery, About and Contact pages', 'Photos of your work, with hover captions', 'A services page with your prices or price ranges', 'Testimonials section and a "call now" button on every page', 'A contact form that emails you'], setup: 'Setup: 1–2 weeks, depending on how quickly we get your photos and details', monthly: "Domain: ~$15–30/yr, hosting free for most small sites", bestFor: 'Best for: most small businesses that want to look established and be easy to contact' },
+        { name: 'Plus (up to 10 pages)', price: '$2,500.99', desc: 'A larger site with more polish and more room to help customers find you on Google.', bullets: ['Everything in Standard', 'Extra pages, such as a page for each main service or each area you serve', 'A bigger photo gallery or before-and-after section', 'Extra design work so the site matches your logo and colours', 'A page set up for posting news or tips'], setup: 'Setup: 2–4 weeks', monthly: "Domain: ~$15–30/yr, hosting free for most small sites", bestFor: 'Best for: a growing business that wants to stand out and compete for more search traffic' }
+      ],
+      notes: ['Included in every option: a design that works on phones, free secure hosting for most small sites, basic search setup, and one round of changes after the first draft.', 'Your domain: you buy your own web address (usually ~$15–30/yr for a .ca) and we connect it.', "Not included: a logo, professional photography, or writing your text from scratch — we build from the facts you give us.", 'Changes later: small updates after launch are billed hourly at $60.99/hour.', 'No monthly fee from us to keep the site online.']
+    }
+  ];
+
+  /* full service listing, rendered as an accordion — every tier's complete
+     bullet list, setup time, monthly fee and "best for", plus a price-range
+     badge in the header so the range is visible before opening it. */
+  function slugify(s) {
+    return s.toLowerCase().replace(/&/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function renderServicesList() {
+    var list = document.getElementById('services-list');
+    if (!list) return;
+
+    SERVICES_FULL.forEach(function (service) {
+      var item = document.createElement('div');
+      item.className = 'service-accordion-item';
+      item.id = slugify(service.title);
+
+      var header = document.createElement('button');
+      header.type = 'button';
+      header.className = 'service-accordion-header';
+      header.setAttribute('aria-expanded', 'false');
+
+      var heading = document.createElement('div');
+      heading.className = 'service-accordion-heading';
+      var titleRow = document.createElement('div');
+      titleRow.className = 'service-accordion-title-row';
+      var title = document.createElement('div');
+      title.className = 'service-accordion-title';
+      title.textContent = service.title;
+      var priceRange = document.createElement('div');
+      priceRange.className = 'service-price-range';
+      priceRange.textContent = service.priceRange;
+      titleRow.appendChild(title);
+      titleRow.appendChild(priceRange);
+      heading.appendChild(titleRow);
+
+      header.appendChild(heading);
+
+      var chevron = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      chevron.setAttribute('class', 'service-chevron');
+      chevron.setAttribute('width', '20');
+      chevron.setAttribute('height', '20');
+      chevron.setAttribute('viewBox', '0 0 24 24');
+      chevron.setAttribute('fill', 'none');
+      chevron.innerHTML = '<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+      header.appendChild(chevron);
+
+      var body = document.createElement('div');
+      body.className = 'service-accordion-body';
+      body.hidden = true;
+
+      var intro = document.createElement('div');
+      intro.className = 'service-intro';
+      intro.textContent = service.intro;
+      body.appendChild(intro);
+
+      service.tiers.forEach(function (tier) {
+        var row = document.createElement('div');
+        row.className = 'service-tier-row';
+
+        var head = document.createElement('div');
+        head.className = 'service-tier-head';
+        var name = document.createElement('div');
+        name.className = 'service-tier-name';
+        name.textContent = tier.name;
+        var price = document.createElement('div');
+        price.className = 'service-tier-price';
+        price.textContent = tier.price;
+        head.appendChild(name);
+        head.appendChild(price);
+        row.appendChild(head);
+
+        var desc = document.createElement('div');
+        desc.className = 'service-tier-desc';
+        desc.textContent = tier.desc;
+        row.appendChild(desc);
+
+        var bullets = document.createElement('ul');
+        bullets.className = 'service-tier-bullets';
+        tier.bullets.forEach(function (b) {
+          var li = document.createElement('li');
+          li.textContent = b;
+          bullets.appendChild(li);
+        });
+        row.appendChild(bullets);
+
+        var meta = document.createElement('div');
+        meta.className = 'service-tier-meta';
+        [tier.setup, tier.monthly, tier.bestFor].forEach(function (m) {
+          if (!m) return;
+          var span = document.createElement('span');
+          span.textContent = m;
+          meta.appendChild(span);
+        });
+        row.appendChild(meta);
+
+        body.appendChild(row);
+      });
+
+      if (service.notes && service.notes.length) {
+        var notesWrap = document.createElement('div');
+        notesWrap.className = 'service-notes';
+        var notesTitle = document.createElement('div');
+        notesTitle.className = 'service-notes-title';
+        notesTitle.textContent = 'Things to know';
+        notesWrap.appendChild(notesTitle);
+        var notesList = document.createElement('ul');
+        service.notes.forEach(function (n) {
+          var li = document.createElement('li');
+          li.textContent = n;
+          notesList.appendChild(li);
+        });
+        notesWrap.appendChild(notesList);
+        body.appendChild(notesWrap);
+      }
+
+      header.addEventListener('click', function () {
+        var isOpen = item.classList.toggle('open');
+        header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        body.hidden = !isOpen;
+      });
+
+      item.appendChild(header);
+      item.appendChild(body);
+      list.appendChild(item);
+    });
+
+    /* deep link: services.html#slug opens that service and scrolls to it,
+       so a card on the home page can point straight at the right one */
+    if (location.hash) {
+      var target = document.getElementById(location.hash.slice(1));
+      if (target && target.classList.contains('service-accordion-item')) {
+        target.classList.add('open');
+        var targetHeader = target.querySelector('.service-accordion-header');
+        var targetBody = target.querySelector('.service-accordion-body');
+        if (targetHeader) targetHeader.setAttribute('aria-expanded', 'true');
+        if (targetBody) targetBody.hidden = false;
+        setTimeout(function () { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60);
+      }
+    }
+  }
+  renderServicesList();
+
+})();
+</script>
+</body>
+</html>

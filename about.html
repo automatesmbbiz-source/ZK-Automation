@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — AutomateSMB</title>
+<meta name="description" content="AutomateSMB is a small IT automation business in Ottawa building booking, reminder, review and follow-up systems for local businesses — no agency overhead, no enterprise contracts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0e10'/%3E%3Ctext x='32' y='35' text-anchor='middle' dominant-baseline='central' font-family='Arial, sans-serif' font-weight='800' font-size='34' fill='%236FE8FF'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page" id="page">
+
+  <!-- fine hologram scanlines -->
+  <div style="position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);"></div>
+
+  <!-- circuit grid backdrop -->
+  <div style="position:absolute;inset:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,59,78,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,59,78,0.05) 1px, transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(ellipse 1300px 850px at 50% 20%, black 0%, transparent 85%);
+    mask-image:radial-gradient(ellipse 1300px 850px at 50% 20%, black 0%, transparent 85%);
+  "></div>
+
+  <!-- ambient glows -->
+  <div class="parallax-slow" style="position:absolute;top:-160px;right:-140px;width:640px;height:640px;border-radius:999px;background:radial-gradient(circle, #FF3B4E33 0%, transparent 70%);filter:blur(10px);pointer-events:none;"></div>
+  <div class="parallax-slow" style="position:absolute;bottom:-220px;left:-160px;width:560px;height:560px;border-radius:999px;background:radial-gradient(circle, #3D8BFF26 0%, transparent 70%);filter:blur(10px);pointer-events:none;"></div>
+
+  <!-- soft light sheen that follows the cursor -->
+  <div class="cursor-sheen" style="position:absolute;inset:0;pointer-events:none;"></div>
+
+  <div class="shell">
+
+    <!-- nav -->
+    <div class="nav">
+      <a href="index.html" style="display:flex;align-items:center;gap:16px;text-decoration:none;">
+        <svg id="brand-mark-svg" width="56" height="56" viewBox="105 25 410 410" role="img" aria-label="AutomateSMB logo">
+          <defs>
+            <filter id="bladeShadow" x="-80%" y="-80%" width="260%" height="260%">
+              <feDropShadow dx="3" dy="4" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.8"/>
+            </filter>
+            <pattern id="brushed" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(-55)">
+              <rect width="4" height="4" fill="none"/>
+              <line x1="0.5" y1="0" x2="0.5" y2="4" stroke="#ffffff" stroke-opacity="0.16" stroke-width="0.5"/>
+              <line x1="1.8" y1="0" x2="1.8" y2="4" stroke="#000000" stroke-opacity="0.16" stroke-width="0.5"/>
+              <line x1="3" y1="0" x2="3" y2="4" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.4"/>
+            </pattern>
+            <polygon id="bladeShape" points="24,-20 55,-50 50,-66 82,-98 66,-91 127,-87 169,-31 158,-86 99,-124 84,-113 38,-135 29,-90 -24,-20"/>
+          </defs>
+          <g id="logo-spin-g">
+          <g transform="translate(310,230) rotate(0)">
+            <g filter="url(#bladeShadow)">
+              <use href="#bladeShape" fill="#2a2c2f"/>
+              <use href="#bladeShape" fill="url(#brushed)"/>
+              <use href="#bladeShape" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="miter"/>
+            </g>
+          </g>
+          <g transform="translate(310,230) rotate(120)">
+            <g filter="url(#bladeShadow)">
+              <use href="#bladeShape" fill="#8f1a26"/>
+              <use href="#bladeShape" fill="url(#brushed)"/>
+              <use href="#bladeShape" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="miter"/>
+            </g>
+          </g>
+          <g transform="translate(310,230) rotate(240)">
+            <g filter="url(#bladeShadow)">
+              <use href="#bladeShape" fill="#8a6a1e"/>
+              <use href="#bladeShape" fill="url(#brushed)"/>
+              <use href="#bladeShape" fill="none" stroke="#000000" stroke-width="3" stroke-linejoin="miter"/>
+            </g>
+          </g>
+          <circle cx="310" cy="230" r="18" fill="#0d0e10" stroke="#1c1f22" stroke-width="1.5" filter="url(#bladeShadow)"/>
+          <text x="310" y="231" text-anchor="middle" dominant-baseline="central" font-family="'Unbounded',sans-serif" font-weight="800" font-size="21" fill="#6FE8FF">A</text>
+          <polygon points="310,225 305,232 315,232" fill="#0d0e10"/>
+          </g>
+        </svg>
+        <span style="font-family:'Unbounded',sans-serif;font-weight:700;font-size:22px;color:#fff;letter-spacing:-0.01em;">AutomateSMB</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="services.html">Services</a>
+        <a class="navlink active" href="about.html">About</a>
+        <a href="contact.html" class="btn-ghost" style="border:1px solid rgba(255,255,255,0.16);border-radius:8px;padding:9px 18px;font-size:14px;font-weight:500;color:#fff;">Contact</a>
+      </div>
+    </div>
+
+    <!-- page header -->
+    <div class="page-header">
+      <div class="page-kicker" style="border:1px solid rgba(255,59,78,0.35);background:rgba(255,59,78,0.08);color:#ff8a95;">ABOUT</div>
+      <h1 style="margin:0 0 14px 0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(28px,4vw,42px);line-height:1.12;color:#f5f5f7;text-wrap:balance;">A small automation shop, built for small business</h1>
+    </div>
+
+    <div style="max-width:720px;padding-bottom:40px;display:flex;flex-direction:column;gap:20px;">
+      <p style="margin:0;font-size:17px;line-height:1.75;color:#d4d4dc;">AutomateSMB is a small IT automation business — no agency overhead, no enterprise contracts. We build the booking, reminder, review and follow-up systems that local businesses need but rarely have time to set up themselves, so the busywork runs on its own and you can get back to the actual work.</p>
+    </div>
+
+    <div class="site-footer">© 2026 AutomateSMB. All rights reserved.</div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var page = document.getElementById('page');
+
+  /* ---- nav logo spin + cursor sheen (same behavior as the home page) ---- */
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var logoSpinEl = document.getElementById('logo-spin-g');
+  var logoAngle = 0, logoVel = 0, lastCursorX = null;
+  function tickLogo() {
+    if (!reducedMotion && logoSpinEl) {
+      logoVel *= 0.94;
+      logoAngle += logoVel;
+      logoSpinEl.setAttribute('transform', 'rotate(' + logoAngle.toFixed(2) + ' 310 230)');
+    }
+    requestAnimationFrame(tickLogo);
+  }
+  requestAnimationFrame(tickLogo);
+  function onPageMove(e) {
+    var r = page.getBoundingClientRect();
+    page.style.setProperty('--mx', Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)));
+    page.style.setProperty('--my', Math.min(1, Math.max(0, (e.clientY - r.top) / r.height)));
+    if (lastCursorX !== null) {
+      logoVel = Math.max(-45, Math.min(45, logoVel + (e.clientX - lastCursorX) * 0.7));
+    }
+    lastCursorX = e.clientX;
+  }
+  function onPageLeave() { page.style.setProperty('--mx', 0.5); page.style.setProperty('--my', 0.5); lastCursorX = null; }
+  page.addEventListener('mousemove', onPageMove);
+  page.addEventListener('mouseleave', onPageLeave);
+
+  /* ---- mobile nav: hamburger toggle for the phone-width dropdown ---- */
+  (function () {
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks = document.getElementById('nav-links');
+    if (!navToggle || !navLinks) return;
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+    navToggle.addEventListener('click', function () {
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    Array.prototype.forEach.call(navLinks.querySelectorAll('a'), function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+  })();
+})();
+</script>
+</body>
+</html>
